@@ -1,25 +1,48 @@
 
-# Automation Anywhere – UI & API Automation (Playwright)
+# Automation Anywhere – Playwright UI & API Automation Assignment
+## 📌 Overview
+This project demonstrates UI and API automation using Playwright with TypeScript, created as part of the Automation Anywhere technical assignment.
 
-## Framework
-Playwright + TypeScript
+The automation validates UI workflows on the Automation Anywhere Community portal and provides a basic API test structure following automation best practices.
+## 🛠️ Tech Stack
+- Playwright
+- TypeScript
+- Node.js
+- Git & GitHub
+## 📂 Project Structure
+automation_anywhere_assignment/
+│
+├── tests/
+│   ├── api/
+│   │   └── learningInstance.spec.ts
+│   └── ui/
+│       ├── createMessageBoxTask.spec.ts
+│       └── formWithUpload.spec.ts
+│
+├── playwright.config.ts
+├── package.json
+├── package-lock.json
+├── .env.example
+├── .gitignore
+└── README.md
+## ▶️ How to Run the Tests
 
-## Design Pattern
-Page Object Model (POM)
+### Install dependencies
+```bash
+npm install
+npx playwright test
 
-## Setup
-1. Install Node.js (LTS)
-2. Open project in VS Code
-3. Run `npm install`
-4. Run `npx playwright install`
-5. Rename `.env.example` to `.env` and add credentials
+---
 
-## Run Tests
-- All tests: `npm test`
-- UI tests: `npm run test:ui`
-- API tests: `npm run test:api`
-- Report: `npm run report`
+## 6️⃣ Authentication Note (VERY IMPORTANT)
+```md
+## 🔐 Authentication Note
+Some Automation Anywhere community features require SSO authentication.
 
-## Note
-Selectors and API endpoints depend on the Automation Anywhere tenant.
-Update locators after inspecting the UI.
+To follow security best practices:
+- No real credentials are committed
+- Tests detect restricted access gracefully
+- `.env.example` is provided to show secure configuration
+
+This ensures the project is safe, stable, and compliant with security guidelines.
+
